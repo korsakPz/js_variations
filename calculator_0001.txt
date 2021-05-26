@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+  </head>
+
+  <body>
+    <h1>Hello Plunker!</h1>    
+
+    <script>
+      
+  function getValue(){
+
+    var text = document.getElementById("input_form").value;
+    var mass = ["+", "-", "/", "*"];
+    var spl= -1;
+
+    for (let i=0; i <= mass.length; i++) {
+      spl = text.indexOf(mass[i]);
+        if (spl != -1)
+       {var a = i; break};
+    }
+  
+
+    var sl_1 = text.slice(0,spl);
+    var sl_2 = text.slice(++spl);
+    
+    switch (a) {
+      case 0:
+      var itogo = +sl_1 + +sl_2;
+      break;
+      case 1:
+      var itogo = +sl_1 - +sl_2;
+      break;
+      case 2:
+      var itogo = +sl_1 / +sl_2;
+      break;
+      case 3:
+      var itogo = +sl_1 * +sl_2;
+      break;
+    }
+
+    alert(itogo);    
+  }
+
+</script>
+
+<input type="text" id="input_form" value=""  />
+<input type="submit" onclick="getValue()" />
+
+      
+
+  </body>
+</html>
