@@ -13,6 +13,7 @@
 
       var mass = ["+", "-", "/", "*"];
 
+      /*
       function poisk(parseStroka) 
        {
           for (let i=2; i <= 3; i++) {
@@ -31,14 +32,36 @@
             } else {
                 alert(parseStroka);
             }
-   
-       
+            */
+
+      function poisk1(rem) 
+        {
+          for (let i=0; i <= 1; i++) {
+            pos = rem.indexOf(mass[i]);
+          if (pos != -1)
+            {var a = i; break};
+          }
+
+        if (pos!==-1) {
+
+          var sl_1 = rem.slice(0,pos);      // 2+5+6+9
+          var sl_2 = rem.slice(++pos);
+          poisk1(sl_1);
+          poisk1(sl_2); 
+
+          //alert("rem "+ sl_2);
+
+        } else {
+        alert(rem);
+        
+          }      
+          
       }
       
       function getValue(){
         var text = document.getElementById("input_form").value;
-            poisk(text);
-        }
+            poisk1(text);
+            }
       
     </script>
         
