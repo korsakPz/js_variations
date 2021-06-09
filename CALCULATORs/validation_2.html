@@ -9,42 +9,43 @@
   <body>
     <h1>Hello Plunker!</h1>    
 
-  <script>
+    <script>
 
-    var mass = ["+", "-", "/", "*"];
+      var mass = ["+", "-", "/", "*"];
 
-    function poisk(parseStroka) 
-      {
-        for (let i=2; i <= 3; i++) {
-           pos = parseStroka.indexOf(mass[i]);
-            if (pos != -1)
-         {var a = i; break};
-      }
+      function poisk(parseStroka) 
+       {
+          for (let i=2; i <= 3; i++) {
+            pos = parseStroka.indexOf(mass[i]);
+              if (pos != -1)
+          {var a = i; break};
+        }
 
-      if (pos!==-1) 
-      {
-        var sl_1 = parseStroka.slice(0,pos);
-        var sl_2 = parseStroka.slice(++pos);
+          if (pos!==-1) 
+            {
+              var sl_1 = parseStroka.slice(0,pos);
+              var sl_2 = parseStroka.slice(++pos);
         
-        poisk(sl_1);
-        poisk(sl_2); 
-      } else {
-          alert(parseStroka);
-          }
+              poisk(sl_1);
+              poisk(sl_2); 
+            } else {
+                alert(parseStroka);
+            }
    
        
       }
       
-    function getValue(){
+      function getValue(){
         var text = document.getElementById("input_form").value;
             poisk(text);
-      }
+        }
       
-</script>
-
-<input type="text" id="input_form" value=""  />
-<input type="submit" onclick="getValue()" />
-
+    </script>
+        
+        <form>
+          <input type="text" id="input_form" value=""  />
+          <input type="submit" onclick="getValue()" />
+        </form>
       
 
   </body>

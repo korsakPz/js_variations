@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+  </head>
+
+  <body>
+    <h1>Calculation</h1>    
+
+    
+    <script>
+
+        var chis1 = document.getElementById("input_form").value;
+        var chis2 = document.getElementById("input_form1").value;
+
+
+      function proizvedenie() 
+        {
+          var proizv = chis1 * chis2;
+          alert(proizv);
+        }
+
+      function chastnoe() 
+        {
+            if (chis2 == 0) 
+            {
+                alert("Операция не может быть выполнена! НЕИЗВЕСТНАЯ ОШИБКА !!!")
+            } else {
+                var chastn = chis1 / chis2;
+            }
+          
+        }
+  
+        function summ()
+            {
+                var sume = chis1 + chis2;
+            }
+
+        function raznost() 
+            {
+                var razno = chis1 - chis2;
+            }
+
+        
+       
+            
+      function getValue(){
+        var chis1 = document.getElementById("input_form").value;
+        var chis2 = document.getElementById("input_form1").value;
+            
+        }
+      
+    </script>
+        
+        <form>
+          <input type="text" id="input_form" value=""  />
+          <input type="text1" id="input_form1" value=""  />
+          <input type="submit" onclick="summ()" value="+" />
+          <input type="submit" onclick="raznost()" value="-"/>
+          <input type="submit" onclick="proizvedenie()" value="*"/>
+          <input type="submit" onclick="chastnoe()" value="/"/>
+          <output name="result">...</output>
+        </form>
+      
+
+  </body>
+</html>
