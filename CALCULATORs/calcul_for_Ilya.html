@@ -12,16 +12,19 @@
     
     <script>
 
-        var chis1 = document.getElementById("input_form").value;
-        var chis2 = document.getElementById("input_form1").value;
+        var chis1 = document.getElementsByName(numb1).value;
+        var chis2 = document.getElementById("numb").value;
+       
 
+        
 
       function proizvedenie() 
         {
           var proizv = chis1 * chis2;
           alert(proizv);
+          
         }
-
+/*
       function chastnoe() 
         {
             if (chis2 == 0) 
@@ -29,6 +32,7 @@
                 alert("Операция не может быть выполнена! НЕИЗВЕСТНАЯ ОШИБКА !!!")
             } else {
                 var chastn = chis1 / chis2;
+                document.write(chastn);
             }
           
         }
@@ -36,34 +40,33 @@
         function summ()
             {
                 var sume = chis1 + chis2;
+                document.write(sume);
             }
 
         function raznost() 
             {
                 var razno = chis1 - chis2;
-            }
-
+                document.write(razno);
+            }   
+                 
+*/            
         
-       
-            
-      function getValue(){
-        var chis1 = document.getElementById("input_form").value;
-        var chis2 = document.getElementById("input_form1").value;
-            
-        }
       
     </script>
         
-        <form>
-          <input type="text" id="input_form" value=""  />
-          <input type="text1" id="input_form1" value=""  />
-          <input type="submit" onclick="summ()" value="+" />
-          <input type="submit" onclick="raznost()" value="-"/>
-          <input type="submit" onclick="proizvedenie()" value="*"/>
-          <input type="submit" onclick="chastnoe()" value="/"/>
-          <output name="result">...</output>
-        </form>
+       
+        <form name="formulka">
+            <input type="text" id="numb1" size="30" value="">
+            <input type="text" id="numb" size="30" value="">
+            <br>
+            <br>
+            <input type="submit" value="Плюс + " onclick="alert(chis1)">
+            <input type="submit" value="Минус - " onclick="alert('click')">
+            <input type="submit" value="Умножить * " onclick="alert('click')">
+            <input type="submit" value="Поделить / " onclick="alert('click')">
+           </form>
+        
       
-
+        
   </body>
 </html>
